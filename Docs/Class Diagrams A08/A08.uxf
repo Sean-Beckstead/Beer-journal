@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>180</x>
+      <y>180</y>
+      <w>420</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>_JournalEntryDAO&lt;&lt;interface&gt;&gt;_
+--
+
+getById(id : int) : JournalEntryDTO
+findByProperty(property : EntryPropertyDTO) : JournalEntryDTO
+getAll() : Dict&lt;JournalEntryDTO&gt;
+SaveOrUpdate(entry:JournalEntryDTO) : JournalEntryDTO
+remove(entry : JournalEntryDTO) : JournalEntryDTO</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>680</x>
+      <y>180</y>
+      <w>450</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>_JournalEntryDTO_
+--
+-id: int
+-properties: Dict&lt;EntryPropertyDTO&gt;
+--
+&lt;&lt;constructor&gt;&gt;JournalEntryDTO(id : int, prop: dict&lt;EntryPropertyDTO&gt;)
+loadProperties(): Dict&lt;EntryPropertyDTO&gt;
+getProperty(Key: String): EntryPointDTO
+getPropertyName(): List&lt;String&gt;
+setProperties(Dict&lt;EntryPropertyDTO&gt;): void
+setProperty(prop: EntryPropertyDTO): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>300</x>
+      <y>30</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>_JournalEntrySQLITE_
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>140</x>
+      <y>750</y>
+      <w>470</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>_EntryProperyDAO&lt;&lt;interface&gt;&gt;_
+--
+getById(id : int) : JournalEntryDTO
+getPropertiesForEntry(id : int): Dict&lt;String, EntryPropertyDTO&gt;
+findByProperty(property : EntryPropertyDTO) : JournalEntryDTO
+getAll() : Dict&lt;JournalEntryDTO&gt;
+SaveOrUpdate(entry:JournalEntryDTO) : JournalEntryDTO
+remove(entry : JournalEntryDTO) : JournalEntryDTO
+saveAll(Dict&lt;String, EntryPropertyDTO&gt;): Dict&lt;String, EntryPropertyDTO&gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>680</x>
+      <y>460</y>
+      <w>280</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>_EntryPropertyDTO_
+--
+-propId: int
+-entryId: int
+-propertyName: String
+-propertyValue: byte[]
+-propertyType: String
+--
+&lt;&lt;constructor&gt;&gt;EntryPropertyDTO(All Fields)
+getPropertyValue(): byte[]
+getPropertyName(): String
+getPropertyType(): String
+setValue(value: byte[]): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>140</x>
+      <y>360</y>
+      <w>490</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>_JournalController_
+--
+-propertyResource: String
+--
+getRandomJournalEntry(): JournalEntryDTO
+getAllJournalEntries(): List&lt;JournalEntryDTO&gt;
+getJournalEntriesByLocation(Location: Coordinates): List&lt;JournalEntryDAO&gt;
+getPropertyResource(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>130</x>
+      <y>550</y>
+      <w>210</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>_Xml Props_
+--
+&lt;properties&gt;
+  &lt;property&gt;
+    &lt;name&gt;&lt;/name&gt;
+    &lt;type  isStatic="bool"/&gt;		
+  &lt;/property&gt;	
+  .
+  .
+  .
+&lt;/properties&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>850</x>
+      <y>320</y>
+      <w>50</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1= *
+m2=1
+</panel_attributes>
+    <additional_attributes>30;140;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>180</x>
+      <y>150</y>
+      <w>210</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;190;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>360</x>
+      <y>70</y>
+      <w>50</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>30;30;30;60;30;80;30;110</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>570</x>
+      <y>230</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;-</panel_attributes>
+    <additional_attributes>30;30;110;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>580</x>
+      <y>630</y>
+      <w>240</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>220;30;30;190</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>360</x>
+      <y>270</y>
+      <w>50</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;90</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>360</x>
+      <y>460</y>
+      <w>50</w>
+      <h>310</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;-</panel_attributes>
+    <additional_attributes>30;30;30;290</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>200</x>
+      <y>460</y>
+      <w>50</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>30;90;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>420</x>
+      <y>570</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>_EntryPropertySQLITE_
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>510</x>
+      <y>610</y>
+      <w>50</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>30;30;30;140</additional_attributes>
+  </element>
+</diagram>

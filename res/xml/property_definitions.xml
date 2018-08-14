@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <propertyDefinitions>
+        <!--
+        Here is an example of a property.
+        Properties are defined by their associated propertyType class
+        See com.TeamAA.Beer_Journal.PropertyTypes.PropertyType
+        <property name="propertyKey" type="propertyType" displayName="Display Name">
+            <typeSpecificField>Type Specific Value</typeSpecificField>
+            <arrayField>
+                <item>First Item</item>
+                .
+                <item>Nth Item</item>
+            <arrayField>
+        </property>
+        -->
+        <property name="style" type="selectList" displayName="Beer Style">
+            <values>
+                <item>Lager</item>
+                <item>Stout</item>
+                <item>Ale</item>
+            </values>
+        </property>
+        <property name="starRating" type="intRange" displayName="Star Rating">
+            <displayType>stars</displayType>
+            <range>
+                <min>1</min>
+                <max>10</max>
+            </range>
+        </property>
+        <property name="color" type="selectList" displayName="Color">
+            <values>
+                <item>Amber</item>
+                <item>Brown</item>
+                <item>Yellow</item>
+                <item>Black</item>
+            </values>
+        </property>
+        <property name="hoppiness" type="intRange" displayName="Hoppiness">
+            <displayType>slider</displayType>
+            <range>
+                <min>1</min>
+                <max>10</max>
+            </range>
+        </property>
+        <property name="maltiness" type="intRange" displayName="Maltiness">
+            <displayType>slider</displayType>
+            <range>
+                <min>1</min>
+                <max>10</max>
+            </range>
+        </property>
+        <property name="bitterness" type="intRange" displayName="Bitterness">
+            <displayType>slider</displayType>
+            <range>
+                <min>1</min>
+                <max>10</max>
+            </range>
+        </property>
+        <property name="body" type="intRange" displayName="Body">
+            <displayType>slider</displayType>
+            <range>
+                <min>1</min>
+                <max>10</max>
+            </range>
+        </property>
+        <property name="comments" type="text" displayName="Comments"/>
+    </propertyDefinitions>
+</resources>

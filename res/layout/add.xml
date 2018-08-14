@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+            android:layout_width="103dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView"
+            android:layout_alignParentLeft="true" android:layout_marginLeft="13dp" android:layout_alignParentTop="true"
+            android:layout_marginTop="9dp" android:src="#00f0ff"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:id="@+id/submitBtn" android:layout_alignParentRight="true" android:layout_alignParentBottom="true"/>
+    <EditText
+            android:layout_width="114dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText"
+            android:layout_alignParentLeft="true" android:layout_marginLeft="215dp" android:layout_alignParentTop="true"
+            android:layout_marginTop="22dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:id="@+id/textView"
+            android:phoneNumber="false"
+            android:layout_alignParentLeft="true" android:layout_marginLeft="172dp"
+            android:layout_alignBaseline="@+id/editText"/>
+    <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/ratingBar"
+            android:numStars="5" android:layout_below="@+id/imageView" android:layout_centerHorizontal="true"/>
+    <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="132dp"
+            android:id="@+id/scrollView"
+            android:layout_alignRight="@+id/submitBtn" android:layout_alignParentTop="true"
+            android:layout_marginTop="116dp" android:layout_above="@+id/submitBtn" android:layout_alignParentLeft="true">
+        <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="187dp" android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true" android:layout_marginTop="97dp" android:layout_above="@+id/submitBtn">
+            <SeekBar
+                    android:layout_width="211dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/seekBar"
+                    android:layout_centerHorizontal="true" android:layout_alignParentTop="true"/>
+            <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinner"
+                    android:layout_alignLeft="@+id/seekBar" android:layout_alignParentTop="true"
+                    android:layout_marginTop="35dp" android:layout_alignRight="@+id/seekBar"/>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
